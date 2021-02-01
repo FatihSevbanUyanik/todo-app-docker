@@ -23,9 +23,9 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v2
-      - run: cd backend && docker build -t fatihsevban/todo-backend ./backend      
-      - run: cd frontend && docker build -t fatihsevban/todo-frontend ./frontend      
-      - run: cd nginx && docker build -t fatihsevban/todo-nginx ./nginx
+      - run: cd backend && docker build -t fatihsevban/todo-backend .      
+      - run: cd frontend && docker build -t fatihsevban/todo-frontend .   
+      - run: cd nginx && docker build -t fatihsevban/todo-nginx .
       - run: docker login -u $DOCKER_ID -p $DOCKER_PASSWORD
         env:
             DOCKER_ID: ${{ secrets.DOCKER_ID }}             
