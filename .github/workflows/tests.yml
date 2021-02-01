@@ -8,7 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - run: cd backend && npm install && npm run test
+      - run: cd backend 
+      - run: npm install 
+      - run: npm run test
         
   test-frontend:
     runs-on: ubuntu-latest
