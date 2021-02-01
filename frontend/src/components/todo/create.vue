@@ -21,7 +21,7 @@
             >
               <v-icon dark> mdi-cloud-upload </v-icon>
             </v-btn>
-          </v-col>
+          </v-col> 
         </v-row>
       </div>
     </form>
