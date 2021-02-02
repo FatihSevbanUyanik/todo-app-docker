@@ -41,7 +41,7 @@ jobs:
       steps:
         - uses: papeloto/action-zip@v1
           with:
-            files: Dockerrun.aws.json
+            files: ./Dockerrun.aws.json
             dest: deploy.zip
 
         - uses: einaregilsson/beanstalk-deploy@v10
