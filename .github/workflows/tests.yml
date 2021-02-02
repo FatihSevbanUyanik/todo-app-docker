@@ -39,6 +39,7 @@ jobs:
 #       needs: [deploy-images-to-dockerhub]
       if: github.ref == 'refs/heads/master'
       steps:
+        - uses: actions/checkout@v2
         - run: cd frontend && ls 
         - run: ls 
         - uses: montudor/action-zip@v0.1.0
