@@ -39,7 +39,7 @@ jobs:
 #       needs: [deploy-images-to-dockerhub]
       if: github.ref == 'refs/heads/master'
       steps:
-        - run: zip -r deploy.zip . 
+        - run: zip -r deploy.zip . -i .
         - uses: einaregilsson/beanstalk-deploy@v10
           with:
               aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
