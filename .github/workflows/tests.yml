@@ -39,6 +39,7 @@ jobs:
 #       needs: [deploy-images-to-dockerhub]
       if: github.ref == 'refs/heads/master'
       steps:
+        - run: ls
         - run: zip -y -r deploy.zip Dockerrun.aws.json
         - uses: einaregilsson/beanstalk-deploy@v10
           with:
