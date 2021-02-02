@@ -39,8 +39,11 @@ jobs:
 #       needs: [deploy-images-to-dockerhub]
       if: github.ref == 'refs/heads/master'
       steps:
-        - run: ls
-        - run: zip -y -r deploy.zip Dockerrun.aws.json
+        - uses: papeloto/action-zip@v1
+          with:
+            files: Dockerrun.aws.json
+            dest: deploy.zip
+
         - uses: einaregilsson/beanstalk-deploy@v10
           with:
               aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
