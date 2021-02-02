@@ -40,7 +40,7 @@ jobs:
       if: github.ref == 'refs/heads/master'
       steps:
         - uses: montudor/action-zip@v0.1.0
-        - run: zip -qq -r deploy.zip Dockerrun.aws.json
+        - run: zip deploy.zip Dockerrun.aws.json
 
         - uses: einaregilsson/beanstalk-deploy@v10
           with:
