@@ -47,5 +47,5 @@ jobs:
               application_name: todo-app
               environment_name: Todoapp-env
               region: "eu-central-1"
-              version_label: "todo-app-809890" 
+              version_label: "todo-app-2222" 
               deployment_package: deploy.zip
